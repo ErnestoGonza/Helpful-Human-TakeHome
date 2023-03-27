@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Header from '../components/header/Header';
+import Sidenav from '../components/sidenav/Sidenav';
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Header />
+      <Sidenav />
     </div>
   );
 }

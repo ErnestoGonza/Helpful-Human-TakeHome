@@ -1,0 +1,26 @@
+.Sidenav {
+  background-color: #d9d9d9;
+  height: 100vh;
+  width: 11%;
+  box-shadow: 3px 0 5px -3px #888;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+
+.Sidenav button {
+  background-color: white;
+  border: none;
+  border-radius: 0.4rem;
+  width: 8rem;
+  height: 2rem;
+  font-family: 'Source Serif Pro';
+  font-size: 1rem;
+}
+
+.Sidenav button:hover {
+  cursor: pointer;
+  width: 8.2rem;
+  height: 2.1rem;
+}

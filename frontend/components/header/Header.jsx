@@ -5,8 +5,8 @@ import mySVG from './logo-symbol.svg';
 const Header = () => {
   return (
     <div className={styles.header}>
-        <img src={mySVG}></img>
-        <input type="text" placeholder="Search" />
+      <img src={mySVG}></img>
+      <input type="text" placeholder="Search" />
     </div>
   );
 };
