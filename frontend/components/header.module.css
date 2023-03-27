@@ -1,0 +1,26 @@
+.header {
+  background-color: #343a40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  width: auto;
+}
+
+.header img {
+  margin-left: 1rem;
+  height: 70%;
+}
+
+.header input {
+  margin-right: 1rem;
+  height: 50%;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+.header input::placeholder {
+  padding-left: 0.7rem;
+  font-size: 1rem;
+  font-family: 'Source Serif Pro';
+}
