@@ -1,6 +1,6 @@
 .Sidenav {
   background-color: #d9d9d9;
-  height: 100vh;
+  height: calc(100vh - 5.5rem);
   width: 11%;
   box-shadow: 3px 0 5px -3px #888;
   display: flex;

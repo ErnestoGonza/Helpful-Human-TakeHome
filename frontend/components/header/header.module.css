@@ -4,16 +4,16 @@
   justify-content: space-between;
   align-items: center;
   height: 4rem;
-  width: calc(100vw - 17px);
+  width: 100vw;
 }
 
 .header img {
-  margin-left: 1rem;
+  margin-left: 2rem;
   height: 70%;
 }
 
 .header input {
-  margin-right: 1rem;
+  margin-right: 2rem;
   height: 50%;
   border-radius: 0.4rem;
   border: none;
