@@ -4,6 +4,7 @@ import Header from '../components/header/Header';
 import Sidenav from '../components/sidenav/Sidenav';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ListView from '../components/list view/ListView';
+import DetailView from '../components/detail view/DetailView';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -16,7 +17,7 @@ function App() {
           <Sidenav />
           <Routes>
             <Route exact path="/" element={<ListView />} />
-            <Route exact path="/display" />
+            <Route exact path="/display" element={<DetailView />} />
           </Routes>
         </div>
       </BrowserRouter>
