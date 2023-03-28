@@ -30,12 +30,14 @@ const ListView = () => {
       <div className={styles.arrowKeys}>
         {
           <BsArrowLeftCircleFill
+            className={styles.arrows}
             onClick={() => decrementComponent(setHexCache, setPage, page)}
           />
         }
         {page}
         {
           <BsArrowRightCircleFill
+            className={styles.arrows}
             onClick={() => incrementComponent(setHexCache, setPage, page)}
           />
         }

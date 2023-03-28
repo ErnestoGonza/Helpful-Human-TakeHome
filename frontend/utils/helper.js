@@ -11,6 +11,7 @@ export function createHexCache() {
   return hexCache;
 }
 
+//Note to self, begin by thinking about incrementing
 export const incrementComponent = (setHex, setPage, currPage) => {
   if (currPage >= 10) return;
   setPage((prevState) => prevState + 1);

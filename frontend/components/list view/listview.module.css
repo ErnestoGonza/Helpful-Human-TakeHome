@@ -50,3 +50,8 @@
   font-size: 2.5rem;
   /* border: 2px solid blue; */
 }
+
+.arrows:hover {
+  cursor: pointer;
+  font-size: 2.6rem;
+}
