@@ -1,9 +1,10 @@
 import styles from './detailview.module.css';
 import { findSimilarColors } from '../../utils/similarColors';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const DetailView = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const hex = location.state.hex;
   const similarColors = findSimilarColors(hex);
@@ -28,7 +29,11 @@ const DetailView = () => {
                 backgroundColor: `${el}`,
               }}
             ></div>
-            <button>{el}</button>
+            <button
+              onClick={() => navigate('/display', { state: { hex: el } })}
+            >
+              {el}
+            </button>
           </div>
         );
       })}
