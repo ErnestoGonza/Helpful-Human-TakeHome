@@ -1,0 +1,52 @@
+.ListView {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 85vh;
+  margin-left: 3.5rem;
+  align-self: center;
+  border: 2px solid red;
+}
+
+.hex {
+  width: 25%;
+  height: 25%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexColor {
+  width: 40%;
+  height: 55%;
+  box-shadow: 0 0 5px -2px;
+  border-radius: 10px;
+}
+
+.hex button {
+  width: 40%;
+  height: 16%;
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 5px -2px;
+  border-radius: 10px;
+  font-family: 'Source Serif Pro';
+  font-size: 1.2rem;
+}
+
+.hex button:hover {
+  cursor: pointer;
+}
+
+.arrowKeys {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Source Serif Pro';
+  font-size: 2.5rem;
+  border: 2px solid blue;
+}
