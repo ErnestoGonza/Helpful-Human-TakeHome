@@ -1,3 +1,8 @@
+/**
+ * This is a Helper function to findSimilarColors()
+ * @param {Takes in hex code format => ('#FFFFFF')} hexCode 
+ * @returns RGB value for corresponding hex code => (255, 255, 255) = (r, g, b)
+ */
 function hexToRgb(hexCode) {
   const hex = hexCode.replace(/^#/, '');
   const r = parseInt(hex.substr(0, 2), 16);
@@ -6,6 +11,11 @@ function hexToRgb(hexCode) {
   return [r, g, b];
 }
 
+/**
+ * This is a Helper function to findSimilarColors()
+ * @param {Takes in rgb format => (255, 255, 255)} rgb 
+ * @returns Hex Code value for corresponding rbg value => '#FFFFFF'
+ */
 function rgbToHex(rgb) {
   const r = rgb[0].toString(16).padStart(2, '0');
   const g = rgb[1].toString(16).padStart(2, '0');
@@ -13,6 +23,12 @@ function rgbToHex(rgb) {
   return '#' + r + g + b;
 }
 
+/**
+ * This is a Helper function to findSimilarColors()
+ * @param {rgb that we are referencing to create our other colors} color1 
+ * @param {each rgb that we will be passing in that will be similar to the referenceRgb} color2 
+ * @returns An array with the color and distance from the reference color
+ */
 function euclideanDistance(color1, color2) {
   const r1 = color1[0];
   const g1 = color1[1];
@@ -23,6 +39,12 @@ function euclideanDistance(color1, color2) {
   return Math.sqrt((r1 - r2) ** 2 + (g1 - g2) ** 2 + (b1 - b2) ** 2);
 }
 
+/**
+ * 
+ * @param {Original color hex code that we will be referencing to create similar colors} referenceColor 
+ * @param {For this situation we want 5 underlying similar colors so I gave it a default value of 5 but it could be changed} numColors 
+ * @returns An array of x number of similar color hex codes to the reference Color
+ */
 export function findSimilarColors(referenceColor, numColors = 5) {
   const referenceRgb = hexToRgb(referenceColor);
   const possibleColors = [];
