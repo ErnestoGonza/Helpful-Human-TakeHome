@@ -51,7 +51,11 @@ const Sidenav = () => {
 
       {colorArr.map((el, idx) => {
         return (
-          <button key={`similar-color-${idx}`} className={styles.colorBtn}>
+          <button
+            key={`similar-color-${idx}`}
+            className={styles.colorBtn}
+            onClick={() => navigate('/display', { state: { hex: el.hex } })}
+          >
             {el.color}
           </button>
         );
