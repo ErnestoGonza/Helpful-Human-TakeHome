@@ -17,7 +17,12 @@ function App() {
           <Sidenav />
           <Routes>
             <Route exact path="/" element={<ListView />} />
-            <Route exact path="/display" element={<DetailView />} />
+            <Route
+              exact
+              path="/display"
+              element={<DetailView />}
+              key={new Date().getTime()}
+            />
           </Routes>
         </div>
       </BrowserRouter>

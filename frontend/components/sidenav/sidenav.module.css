@@ -1,26 +1,47 @@
 .Sidenav {
   background-color: #d9d9d9;
-  height: calc(100vh - 5.5rem);
-  width: 11%;
+  min-height: calc(100vh - 5.6rem);
+  width: 13%;
   box-shadow: 3px 0 5px -3px #888;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding-top: 1.5rem;
+  /* border: 1px solid red; */
 }
 
-.Sidenav button {
+.randomBtn {
   background-color: white;
   border: none;
   border-radius: 0.4rem;
-  width: 8rem;
+  width: 9rem;
   height: 2rem;
   font-family: 'Source Serif Pro';
-  font-size: 1rem;
+  font-size: 1.1rem;
+  box-shadow: 0 0 5px -2px;
+  /* border: 1px solid blue; */
+  margin-bottom: 20px;
 }
 
-.Sidenav button:hover {
+.randomBtn:hover {
   cursor: pointer;
-  width: 8.2rem;
+  width: 9.2rem;
   height: 2.1rem;
+}
+
+.colorBtn {
+  /* border: 1px solid green; */
+  background: none;
+  border: none;
+  font-family: 'Source Serif Pro';
+  font-size: 1.1rem;
+  margin: 10px 80px 20px 0;
+  width: 25%;
+  text-align: left;
+}
+
+.colorBtn:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

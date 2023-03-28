@@ -1,10 +1,11 @@
 import styles from './detailview.module.css';
-import { useState } from 'react';
-import { randomHex } from '../../utils/helper';
 import { findSimilarColors } from '../../utils/similarColors';
+import { useLocation } from 'react-router-dom';
 
 const DetailView = () => {
-  const hex = randomHex();
+  const location = useLocation();
+
+  const hex = location.state.hex;
   const similarColors = findSimilarColors(hex);
 
   return (
