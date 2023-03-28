@@ -1,0 +1,75 @@
+.DetailView {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 85vh;
+  margin-left: 3.5rem;
+  align-self: center;
+  /* border: 2px solid red; */
+}
+
+.mainView {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexColor {
+  width: 60%;
+  height: 80%;
+  box-shadow: 0 0 5px -2px;
+  border-radius: 10px;
+}
+
+.mainView button {
+  width: 60%;
+  height: 10%;
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 5px -2px;
+  border-radius: 10px;
+  font-family: 'Source Serif Pro';
+  font-size: 1.2rem;
+}
+
+/* .mainView button:hover {
+  cursor: pointer;
+} */
+
+/* 
+  Below this poit is just the lower icons
+*/
+
+.hex {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex button {
+  width: 60%;
+  height: 25%;
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 5px -2px;
+  border-radius: 10px;
+  font-family: 'Source Serif Pro';
+  font-size: 1.2rem;
+}
+
+.hex button:hover {
+  cursor: pointer;
+}
+
+.similarHex {
+  width: 60%;
+  height: 100%;
+  box-shadow: 0 0 5px -2px;
+  border-radius: 10px;
+}
