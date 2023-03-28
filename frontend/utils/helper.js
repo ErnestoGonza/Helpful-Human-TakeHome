@@ -11,7 +11,8 @@ export function createHexCache() {
   return hexCache;
 }
 
-export const incrementComponent = (setHex, setPage) => {
+export const incrementComponent = (setHex, setPage, currPage) => {
+  if (currPage >= 10) return;
   setPage((prevState) => prevState + 1);
   setHex(createHexCache);
 };

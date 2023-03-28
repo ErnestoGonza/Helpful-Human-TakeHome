@@ -36,7 +36,7 @@ const ListView = () => {
         {page}
         {
           <BsArrowRightCircleFill
-            onClick={() => incrementComponent(setHexCache, setPage)}
+            onClick={() => incrementComponent(setHexCache, setPage, page)}
           />
         }
       </div>
