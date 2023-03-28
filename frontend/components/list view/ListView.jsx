@@ -1,18 +1,15 @@
 import styles from './listview.module.css';
-import { randomHex } from '../../utils/helper';
+import {
+  createHexCache,
+  incrementComponent,
+  decrementComponent,
+} from '../../utils/helper';
 import { useState } from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 
-function createHexCache() {
-  const hexCache = [];
-  for (let j = 0; j < 12; j++) {
-    hexCache.push(randomHex());
-  }
-  return hexCache;
-}
-
 const ListView = () => {
-  const [hexCache, setHexcache] = useState(() => createHexCache());
+  const [page, setPage] = useState(1);
+  const [hexCache, setHexCache] = useState(() => createHexCache());
 
   return (
     <div className={styles.ListView}>
@@ -31,7 +28,17 @@ const ListView = () => {
       })}
       {/* Comment */}
       <div className={styles.arrowKeys}>
-        {<BsArrowLeftCircleFill />}0{<BsArrowRightCircleFill />}
+        {
+          <BsArrowLeftCircleFill
+            onClick={() => decrementComponent(setHexCache, setPage, page)}
+          />
+        }
+        {page}
+        {
+          <BsArrowRightCircleFill
+            onClick={() => incrementComponent(setHexCache, setPage)}
+          />
+        }
       </div>
     </div>
   );
