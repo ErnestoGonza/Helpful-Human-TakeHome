@@ -12,10 +12,27 @@ export function createHexCache() {
 }
 
 //Note to self, begin by thinking about incrementing
-export const incrementComponent = (setHex, setPage, currPage) => {
-  if (currPage >= 10) return;
+export const incrementComponent = (
+  setHexCache,
+  setPage,
+  page,
+  pageCache,
+  setPageCache
+) => {
+  if (page >= 10) return;
   setPage((prevState) => prevState + 1);
-  setHex(createHexCache);
+  const newCache = createHexCache();
+  console.log(pageCache);
+  if (!pageCache[page + 1]) {
+    setPageCache((prevState) => {
+      const newState = { ...prevState };
+      newState[page + 1] = newCache;
+      setHexCache(newCache);
+      return newState;
+    });
+  } else {
+    setHexCache(pageCache[page + 1]);
+  }
 };
 
 export const decrementComponent = (setHex, setPage, currPage) => {

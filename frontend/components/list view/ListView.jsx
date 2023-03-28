@@ -10,6 +10,7 @@ import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 const ListView = () => {
   const [page, setPage] = useState(1);
   const [hexCache, setHexCache] = useState(() => createHexCache());
+  const [pageCache, setPageCache] = useState({ 1: hexCache });
 
   return (
     <div className={styles.ListView}>
@@ -38,7 +39,15 @@ const ListView = () => {
         {
           <BsArrowRightCircleFill
             className={styles.arrows}
-            onClick={() => incrementComponent(setHexCache, setPage, page)}
+            onClick={() =>
+              incrementComponent(
+                setHexCache,
+                setPage,
+                page,
+                pageCache,
+                setPageCache
+              )
+            }
           />
         }
       </div>
