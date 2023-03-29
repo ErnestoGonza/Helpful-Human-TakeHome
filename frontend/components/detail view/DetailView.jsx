@@ -1,5 +1,6 @@
 import styles from './detailview.module.css';
 import { findSimilarColors } from '../../utils/similarColors';
+import { handleCopy } from '../../utils/helper';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const DetailView = () => {
@@ -18,7 +19,7 @@ const DetailView = () => {
             backgroundColor: `${hex}`,
           }}
         ></div>
-        <button>{hex}</button>
+        <button onClick={handleCopy}>{hex}</button>
       </div>
       {similarColors.map((el, idx) => {
         return (
