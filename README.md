@@ -1,3 +1,5 @@
+Live App: https://hh-take-home.vercel.app/
+
 # Helpful Human Applicant Interview Challenge
 
 Welcome to Helpful Human's at home proficiency challenge! This challenge gauges your knowledge on a few different metrics that we use, in part, to evaluate your skills. In this repo, you will find the assets that are required to replicate the design that is also included in this repo. Both .sketch and .png assets are available.
